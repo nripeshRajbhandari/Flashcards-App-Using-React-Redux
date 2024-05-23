@@ -16,15 +16,14 @@ export const cardsSlice = createSlice({
             };
 
             //add new object to the current state
-            state.cards[action.payload.id] = newCard;
+            state.cards[action.payload.id] = newCard;            
         }
-    }
-    
+    }    
 });
 
 
-//selector
-export const selectCards = (state) => state.cards.cards;
+//selector --> Select cards by ID
+export const selectCardsById = (id) => (state) => state.cards.cards[id];
 
 // action creators + reducer
 export const { addCard } = cardsSlice.actions;

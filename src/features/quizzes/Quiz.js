@@ -11,6 +11,8 @@ export default function Quiz() {
   const { quizId } = useParams();
   const quiz = quizzes[quizId];
 
+  console.log(quiz.cardIds);
+  console.log(quiz.name);
   if(!quiz) {
     return <Navigate to={ROUTES.quizzesRoute()} replace/>
   }
